@@ -1,0 +1,12 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--locked {
+    position: fixed;
+    filter: blur(5px);
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../scss/vars";
+
+.coaches {
+  &__inner {
+    margin: -30px -16px -30px 0;
+  }
+  &__item {
+    margin: 30px 16px 30px 0;
+
+  }
+  &__navigation {
+    margin-top: 25px;
+    @media only screen and (max-width: 960px) {
+      display: none;
+    }
+  }
+  &__counter {
+    margin: 0 2%;
+  }
+  & .slick-slide {
+    display: flex;
+  }
+  & .slick-arrow {
+    transition: color 0.2s linear;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  & .slick-disabled {
+    opacity: 0.3;
+    &:hover {
+      color: inherit;
+    }
+  }
+}

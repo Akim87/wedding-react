@@ -1,0 +1,13 @@
+@import "../../scss/vars";
+
+.services {
+  &__inner {
+    margin: 0 -8px;
+    @media only screen and (max-width: $media-mob) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    margin: 0 8px 30px;
+  }
+}

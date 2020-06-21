@@ -1,0 +1,29 @@
+@import "../../scss/vars";
+
+.offer {
+  &__inner {
+    flex-wrap: wrap;
+    margin-bottom: -3%;
+  }
+  &__item {
+    width: 24%;
+    margin-bottom: 6%;
+    @media only screen and (max-width: $media-mob) {
+      width: 49%;
+      margin-bottom: 10%;
+    }
+  }
+  &__icon {
+    font-size: 4rem;
+    color: $color-accent;
+    margin-bottom: 4%;
+  }
+  &__description {
+    text-align: center;
+    line-height: 1.5rem;
+    max-width: 65%;
+    @media only screen and (max-width: $media-mob) {
+      max-width: 90%;
+    }
+  }
+}

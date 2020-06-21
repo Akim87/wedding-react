@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "wedding-dance";
+  src: url("../assets/fonts/wedding-dance.eot");
+  src: url("../assets/fonts/wedding-dance.eot") format("opentype"),
+    url("../assets/fonts/wedding-dance.woff2") format("woff2"),
+    url("../assets/fonts/wedding-dance.woff") format("woff"),
+    url("../assets/fonts/wedding-dance.ttf") format("truetype"),
+    url("../assets/fonts/wedding-dance.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.icon {
+  display: inline-block;
+  font: normal normal normal 1em/1 "wedding-dance";
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: inherit;
+}
+
+@function unicode($str) {
+  @return unquote('"\\#{$str}"');
+}
+
+$icon-photos: unicode(ea02);
+$icon-form: unicode(ea03);
+$icon-coffee: unicode(ea04);
+$icon-door: unicode(ea05);
+$icon-coaches: unicode(ea06);
+$icon-star: unicode(ea07);
+$icon-fun: unicode(ea08);
+$icon-happy: unicode(ea09);
+$icon-back: unicode(ea0b);
+$icon-forward: unicode(ea0c);
+$icon-arrow: unicode(ea0d);
+
+.icon-photos::before {
+  content: $icon-photos;
+}
+
+.icon-form::before {
+  content: $icon-form;
+}
+
+.icon-coffee::before {
+  content: $icon-coffee;
+}
+
+.icon-door::before {
+  content: $icon-door;
+}
+
+.icon-coaches::before {
+  content: $icon-coaches;
+}
+
+.icon-star::before {
+  content: $icon-star;
+}
+
+.icon-fun::before {
+  content: $icon-fun;
+}
+
+.icon-happy::before {
+  content: $icon-happy;
+}
+
+.icon-back {
+  transform: scaleX(-1);
+  &::before {
+    content: $icon-forward;
+  }
+}
+
+.icon-forward::before {
+  content: $icon-forward;
+}
+
+.icon-arrow::before {
+  content: $icon-arrow;
+}

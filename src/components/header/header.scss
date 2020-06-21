@@ -1,0 +1,59 @@
+@import "../../scss/vars";
+
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 3;
+  min-height: 8vh;
+  transition: all 0.3s;
+  @media only screen and (max-width: $media-mob) {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  &__login-btn {
+    margin-left: 1rem;
+  }
+
+  &__menu-burger {
+    transition: all 0.3s;
+    content: "";
+    height: 2px;
+    width: 32px;
+    border-radius: 4px;
+    background-color: $color-main;
+    position: relative;
+    z-index: 6;
+    display: block;
+    &::after {
+      @extend .header__menu-burger;
+      position: absolute;
+      top: -5px;
+    }
+    &::before {
+      @extend .header__menu-burger;
+      position: absolute;
+      bottom: -5px;
+    }
+    @media only screen and (min-width: $media-mob) {
+      display: none;
+    }
+    &--active {
+      background-color: transparent;
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+
+  &--has-shadow {
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  }
+}
+

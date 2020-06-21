@@ -1,0 +1,15 @@
+@import "../../scss/vars";
+
+.footer {
+  background-color: #1f1f1f;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  color: white;
+  @media only screen and (max-width: $media-mob) {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  &.base-section {
+    margin-bottom: 0;
+  }
+}
